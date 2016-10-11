@@ -1,0 +1,11 @@
+需要
+赤兔账号
+手机号（或其他账号登录）
+状态包括关注人的状态，昵称 头像 发布信息 
+
+登陆，注册状态
+关系图
+主角： id  password name phone sex register_time education(教育背景)  industry(行业) work(工作)
+
+表：ct_status
+ id  name industry(行业) work(工作) content(状态内容) thumbUp(点赞数) comment(评论数) share(分享数) tag(标签)
