@@ -1,0 +1,95 @@
+<style type="text/css">
+	#thumbColor{
+		color: #97A1AA;
+	}
+	#thumbNewColor{
+		color: #37BE9D;
+</style>
+<div class="mui-content">
+	<!--头部内容-->
+	<header class="mui-bar mui-bar-nav">
+	    	<h3 class="mui-text-left mui-title">赤兔</h3>
+	    	<!--发新信息-->
+	   	 	<a ng-click="mainWindow('sheet2')" class="mui-icon mui-icon-compose mui-icon-right-nav mui-pull-right icon-style"></a>
+	   	 	 <!--sousuo-->
+	    	<a ng-click="mainWindow('sheet3')" class="mui-icon mui-icon-search mui-icon-right-nav mui-pull-right icon-style"></a>	
+	</header>
+		<div class="mui-content">
+			<!--推广信息-->	
+	        <ul class="mui-table-view">
+		        <li class="mui-table-view-cell mui-media" ng-click="mainWindow('showTitle')">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="img/147_21916.jpg" alt="推广图" style="width: 55px;height:55px;border: 1px solid #ECECEC;"> 
+		                <div class="mui-media-body" style="font-size:15px;color: #6aa8d0;padding-top: 2px;white-space:normal;">
+		                    #读书时的成绩 ，是不是一定程度上证明了一个人的工作能力
+		                    <!--<span class="show-title">话题</span>-->
+		                    <p class="mui-ellipsis" style="font-size: 14px;">{{datas}}&nbsp;&nbsp;58人已参与</p>
+		                </div>
+		            </a>
+		        </li>   
+		    </ul>
+		    <!--用户发布状态-->
+		   	<ul class="mui-table-view" style="margin-top: 15px;">
+		        <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <span class="mui-pull-left mui-head-image"></span>
+		                <div class="mui-media-body">
+		                	<span style="float: right;font-size: 13px;color: #8f8f94;">同行业</span>
+		                    	<span style="font-family: 微软雅黑">小明</span><p class="industry" style="display:inline-block">教育科研|科学研究</p>
+		                    <p class="mui-ellipsis work-position">党校 讲师</p>
+		                </div>
+		                <p class="content">测试一条状态的发布，这是一条测试状态测试
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero nemo molestiae nihil eum voluptate a doloremque provident amet ad tempora maxime quod corporis hic dolorum sapiente odio minima velit quia!</p>
+		                <div class="mui-inner-wrap">
+		                <img src="img/weixin2d-new.png" class="mui-media-large mui-wrap-img" height="104px">
+		                <img src="img/weixin2d-new.png"  class="mui-media-large mui-wrap-img" height="104px">
+		                <img src="img/weixin2d-new.png"  class="mui-media-large mui-wrap-img" height="104px">
+		                </div>
+		            </a>
+		            <div class="mui-inner-wrap newsIcon">
+		            	<a ng-click="mainWindow('sheet1')" href="">
+		            		<span class="mui-icon iconfont icon-fenxiang">0</span></a>
+		            	<a href="">
+		            		<span class="mui-icon iconfont icon-dianzan" id={{thumbColor}} ng-click="thumbs()" ng-click="myStyle={color:'red'}" ng-style="myStyle">{{thumbUpOld}}</span></a>
+		            	<a href="">
+		            		<span class="mui-icon iconfont icon-pinglun">0</span></a>
+		            </div>
+		            <div style="clear:both"></div>
+		        </li>   
+		    </ul>
+	    </div>
+		<!--<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			这里放置真实显示的DOM内容
+		</div>
+		</div>-->
+		<!--尾部区域，标签切换栏-->
+		<nav class="mui-bar mui-bar-tab mui-background-color">
+		    <a class="mui-tab-item mui-active main" ng-click="jump('/main')">
+		        <span class="mui-icon iconfont icon-home" style="font-size: 28px;right: 3px;"></span>
+		        <span class="mui-tab-label mui-text-align">赤兔</span>
+		    </a>
+		    <a class="mui-tab-item connection" ng-click="jump('/connection')">
+		        <span class="mui-icon iconfont icon-iconfontlvshiquan"></span>
+		        <span class="mui-tab-label">人脉</span>
+		    </a>
+		    <a class="mui-tab-item message" ng-click="jump('/message')">
+		        <span class="mui-icon iconfont icon-xiaoxi"></span>
+		        <span class="mui-tab-label">消息</span>
+		    </a>
+		    <a class="mui-tab-item discovery" ng-click="jump('/discovery')">
+		        <span class="mui-icon iconfont icon-sousuo"></span>
+		        <span class="mui-tab-label">发现</span>
+		    </a>
+		    <a class="mui-tab-item mine" ng-click="jump('/mine')">
+		        <span class="mui-icon iconfont icon-yonghu"></span>
+		        <span class="mui-tab-label">我</span>
+		    </a>
+		</nav>
+		
+</div>
+<!--分享弹出菜单框。-->
+<div ng-include="'tpl/include/poper.html'"></div>
+<div ng-include="'tpl/include/dynamic.html'"></div>
+<div ng-include="'tpl/include/search.html'"></div>
+<div ng-include="'tpl/include/showTitle.html'"></div>

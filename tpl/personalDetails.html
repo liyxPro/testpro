@@ -1,0 +1,151 @@
+<style type="text/css">
+	.complete{
+		margin-top: 44px;
+		height:44px;
+		text-align:center;
+		font-size: 14px;
+		padding-top: 5px;
+		color:#37BE9D;
+	}
+	#listDetails{
+		padding:0;
+		margin:0;
+		background: #FFFFFF;
+		max-height: 1000px;
+		overflow: hidden;
+	}
+	#listDetails :first-child{
+		border-radius: 0;
+	}
+	#listDetails li:not(:first-child){
+		width:75%;
+		float: right;
+		overflow:visible;
+		padding:10px 15px 10px 0;
+	}
+	#listDetails li:not(:first-child) a{
+		margin-left: -27%;
+    	width: 20%;
+    	text-align: right;
+    	border-radius: 0;
+	}
+	#listDetails li:first-child{
+		padding:5px 15px;
+		font-size: 14px;
+	}
+	#listDetails li:not(:first-child) a,#listDetails li:not(:first-child) span:nth-child(2){
+		font-size: 14px;
+		color: #282828;
+	}
+	#listDetails li:not(:first-child) a,#listDetails li:not(:first-child) span:last-child{
+		color: #858585;
+	}
+	#listDetails li:not(:first-child) img{
+		width: 73px;
+		height: 73px;
+		border-radius: 50%;
+	}
+	#webView{
+		overflow: auto;
+		position: absolute;
+	}
+	.mui-table-view-cell:after{
+		left:0;
+	}
+</style>
+<!--class="mui-popover mui-popover-bottom mui-popover-action"-->
+<div id="personalDetails"  >
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;border-radius: 0;">
+		    <a ng-click="jump('/mine')" class="mui-icon mui-icon-left-nav mui-pull-left" style="color: #000;"></a>
+		     
+		    <h1 class="mui-title mui-pull-left" style="color: #000;text-align: left;margin-left: 20px;font-weight: normal;">编辑资料</h1>
+		</header>
+		<div style="top:0;background-color: #fff;" id="webView">
+		<div class="complete">
+			资料完成度80%
+			<div style="width: 85%;margin: 10px auto;">
+				<span id="progress" class="mui-progressbar">
+					<span></span>
+				</span>
+			</div>
+		</div>
+		<ul class="mui-table-view" id="listDetails">
+		        <li class="mui-table-view-cell" style="background:#F2F2F2">
+		            <a class="mui-pull-left">基本资料</a>
+		        </li>
+		        <li class="mui-table-view-cell" style="line-height: 73px;" ng-click="details('photo')">
+		            <a class="mui-pull-left">职业照</a>
+		        	<img class="mui-pull-left"  src="img/weixin2d-new.png" alt="" />
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-pull-left">姓名</a>
+		            <span class="mui-pull-left">夏天</span>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">性别</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">星座</a>
+		            
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">工作城市</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">行业职能</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">公司职位</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">个人签名</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		</ul>
+		<ul class="mui-table-view" id="listDetails">
+		        <li class="mui-table-view-cell" style="background:#F2F2F2">
+		            <a class="mui-pull-left">详细信息</a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">职业技能</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">职业经历</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">教育经历</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <span class="mui-pull-right"></span>
+		            <a class="mui-pull-left">职业偏好</a>
+		            <span class="mui-pull-right">></span>
+		        </li>
+		</ul> 
+		
+		</div>
+		
+</div>
+<div ng-include="'tpl/include/photo.html'"></div>
+<script>mui("#progress").progressbar({progress:20}).show();</script>

@@ -1,0 +1,234 @@
+<style>
+	input.search-box{
+		width:90%;
+		height:28px;
+		margin-top:8px;
+	}
+	/*直播内容介绍*/
+	ul#online-box{
+		margin-top: 10px;
+		padding: 0 0 10px;
+		padding-bottom:0;
+	}
+	ul#online-box li:nth-child(2){
+		padding-top: 25px;
+		padding-bottom: 10px;
+	}
+	ul#online-box li:nth-child(1){
+		border-bottom: 1px solid #CCCCCC;
+	}
+	p.online-box-title{
+		border-left:5px solid #36C09E ;
+		margin:10px 0 10px 10px;
+		padding-left: 10px;
+	}
+	/*#online-box*/
+	li.online-box-content img{
+		border-radius: 10px;
+		width: 94.5%;
+	}
+	li.online-box-content p.online-box-text{
+		position: absolute;
+		bottom: 27px;
+		left: 2.75%;
+		width: 94.5%;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		color: #ccc;
+		padding: 5px 5px;
+		font-size: 12px;
+		background: rgba(80,80,80,0.5);
+	}
+	.online-box-content-title{
+		text-align: left;
+		padding-left: 12px;
+	}
+	li.online-box-content>p{
+		height: 20px;
+    	overflow: hidden;
+    	font-size:12px ;
+    	color:#989898;
+	}
+	/*直播主持人信息*/
+	.online-box-content p.online-box-anchor{
+		margin: 0;
+		height:26px;
+		line-height: 26px;
+	}
+	.online-box-content p.online-box-anchor span{
+		margin-right: 8px;
+	}
+	.online-box-anchor-head{
+		width: 7%;
+    	height: 26px;
+    	border: 1px solid #ccc;
+    	border-radius: 50%;
+    	margin-right: 8px;
+	}
+	.online-box-anchor-name{
+		color:#36C09E;
+	}
+	/*直播列表信息*/
+	.online-list-text{
+		position: absolute;
+    	bottom: 27px;
+    	left: 2.75%;
+    	width: 36%;
+    	border-bottom-left-radius: 10px;
+    	border-bottom-right-radius: 10px;
+    	color: #ccc;
+    	padding: 5px 5px;
+    	font-size: 12px;
+    	background: rgba(80,80,80,0.5);
+	}
+</style>
+<div class="mui-content">
+	<header class="mui-bar mui-bar-nav">
+	   	 	<a class="mui-icon icon-saoma iconfont mui-icon-left-nav mui-pull-left icon-style"></a>
+			<input type="text" name="keywords" id="keywords" value="" class="mui-input-speech mui-icon-right-nav mui-pull-right search-box"/>
+		</header>
+		<div class="mui-content">
+	    <!--广告轮播-->
+	    <div id="slider" class="mui-slider" >
+	          <div class="mui-slider-group mui-slider-loop">
+	            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	              <a href="#">
+	                <img src="img/tuiguang.png">
+	              </a>
+	            </div>
+	            <!-- 第一张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="img/tuiguang.png">
+	              </a>
+	            </div>
+	            <!-- 第二张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="img/tuiguang.png">
+	              </a>
+	            </div>
+	            
+	            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	              <a href="#">
+	                <img src="img/tuiguang.png">
+	              </a>
+	            </div>
+	          </div>
+	          <div class="mui-slider-indicator">
+	            <div class="mui-indicator mui-active"></div>
+	            <div class="mui-indicator"></div>
+	            <div class="mui-indicator"></div>
+	            <div class="mui-indicator"></div>
+	          </div>
+	        </div>
+	    <!--九宫格-->	
+	    <ul class="mui-table-view mui-grid-view mui-grid-9">
+	    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+	    	    <a href="#">
+	    	        <span class="mui-icon mui-icon-home"></span>
+	    	        <div class="mui-media-body">活动</div>
+	    	    </a>
+	    	</li>
+	    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+	    	    <a href="#">
+	    	        <span class="mui-icon mui-icon-email">
+	    	        	<!--<span class="mui-badge mui-badge-red">5</span>-->
+	    	        </span>
+	    	        <div class="mui-media-body">小组</div>
+	    	    </a>
+	    	</li>
+	    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+	    	    <a href="#">
+	    	        <span class="mui-icon mui-icon-chatbubble"></span>
+	    	        <div class="mui-media-body">职位</div>
+	    	    </a>
+	    	</li>
+	    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+	    	    <a href="#">
+	    	        <span class="mui-icon mui-icon-location"></span>
+	    	        <div class="mui-media-body">附近</div>
+	    	    </a>
+	    	</li>
+	    </ul>
+	    	
+	    <!--推广内容直播-->	
+	    <ul class="mui-table-view mui-grid-view" id="online-box"> 
+	    	<li class="mui-media mui-col-xs-12">
+	    		<p class="online-box-title" style="">热门活动</p>
+	    	</li>
+	        <li class="mui-table-view-cell mui-media mui-col-xs-12 online-box-content">
+	            <a href="#">
+	                <div>
+		                <img style="width:94.5%" class="mui-media-object" src="img/tuiguang.png">
+		                <p class="online-box-text">
+		                	<span class="mui-pull-left">线上直播</span>
+		                	<span>XXX人已报名</span>
+		                	<span class="mui-pull-right">明天 20:00</span>
+		                </p>
+	                </div>
+	                <div class="mui-media-body online-box-content-title">不玩游戏怎么提升自己</div>
+	                
+	            </a>
+	            <p class="content"> 我就是一条测试语句我就是一条测试语句我就是一条测试语句我就是一条测试语句</p>
+	            <p class="content online-box-anchor">
+	            	<span class="mui-pull-left online-box-anchor-head">头像</span><span class="mui-pull-left online-box-anchor-name">雷宗杨</span><span class="mui-pull-left online-box-anchor-corp">北京我知科技有限公司</span><span class="mui-pull-left online-box-anchor-zhiwei">运营总监</span>
+	            </p>
+	        </li>
+	    </ul>
+	    
+	    <ul class="mui-table-view">
+		 	<li class="mui-table-view-cell mui-media online-box-content" style="line-height: 16px;">
+		 		<a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/tuiguang.png" alt="推广图" style="width: 36%;height:92px;border: 1px solid #ECECEC;"> 
+		             <p class="online-list-text" style="width:35.5%;bottom: 1px;left: 1px;background: rgba(15,15,55,.5);">
+		                <span class="mui-pull-left">XXX人已报名</span>
+		             </p>
+<div class="mui-media-body" style="padding-top: 2px;font-size: 17px;padding-top: 5px;padding-left: 10px;white-space: normal;line-height: 18px;">跳槽首选 : 轻松玩转500强求职  
+		            	 
+		                <p class="mui-ellipsis" style="font-size: 13px;margin-top: 8px;">张柏涛  | 全国零售环境高级经理</p>
+		                <p class="mui-ellipsis" style="font-size: 12px;margin-top: 7px;">
+		                	<span class="mui-pull-left">线上直播</span>
+		                	<span class="mui-pull-right">明天19:00</span>
+		                </p>
+		            	
+		            </div>
+		        </a>
+		 	</li>
+		
+	    
+		</div>
+		<!--<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			这里放置真实显示的DOM内容
+		</div>
+		</div>-->
+		<nav class="mui-bar mui-bar-tab mui-background-color">
+		    <a class="mui-tab-item main" ng-click="jump('/main')">
+		        <span class="mui-icon iconfont icon-home" style="font-size: 28px;right: 3px;"></span>
+		        <span class="mui-tab-label mui-text-align">赤兔</span>
+		    </a>
+		    <a class="mui-tab-item connection" ng-click="jump('/connection')">
+		        <span class="mui-icon iconfont icon-iconfontlvshiquan"></span>
+		        <span class="mui-tab-label">人脉</span>
+		    </a>
+		    <a class="mui-tab-item message" ng-click="jump('/message')">
+		        <span class="mui-icon iconfont icon-xiaoxi"></span>
+		        <span class="mui-tab-label">消息</span>
+		    </a>
+		    <a class="mui-tab-item discovery  mui-active" ng-click="jump('/discovery')">
+		        <span class="mui-icon iconfont icon-sousuo"></span>
+		        <span class="mui-tab-label">发现</span>
+		    </a>
+		    <a class="mui-tab-item mine" ng-click="jump('/mine')">
+		        <span class="mui-icon iconfont icon-yonghu"></span>
+		        <span class="mui-tab-label">我</span>
+
+		</nav>
+</div>
+<script type="text/javascript">
+	var a=1;
+	console.log(a);
+</script>

@@ -1,0 +1,154 @@
+<style type="text/css">
+	.mine li{
+		line-height: 30px;
+	}
+	.mine li img.mui-media-object{
+		width: 42px;
+		height: 33px;
+		border: 1px solid #ECECEC;
+	}
+	.mine li .mui-media-body{
+		font-size:15px;
+	}
+	.mine li .mui-media-body p{
+		margin:0;
+	}
+</style>
+<div class="mui-content">
+	<header class="mui-bar mui-bar-nav">
+	   	 	<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+	    	<h3 class="mui-text-left mui-title">我</h3>
+		</header>
+		<div class="mui-content">
+	        <ul class="mui-table-view">
+		    <li class="mui-table-view-cell mui-media" style="line-height: 42px">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图" style="width: 20.5%;height:74px;border: 1px solid #ECECEC;border-radius: 50%">
+		                <div class="mui-media-body">
+		                                                            夏天
+		                    <p class="mui-pull-right">></p>  
+		                    <p class="" style="height: 20px;line-height: 20px;font-size: 17px;color: #000;margin: 0;">达内时代科技   助教</p>   
+		                </div>
+		            </a>
+		        </li> 
+		    </ul>
+		    
+		    <!--资料-->
+		    <ul class="mui-table-view mine" style="margin-top: 14px;">
+		    	<li class="mui-table-view-cell mui-media" ng-click="jump('/personal')">
+		    		<!--ng-click="editData()"--> 
+		    		
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            编辑资料
+		                    <p class="mui-pull-right">></p>   
+		                </div>
+		            </a>
+		        </li> 
+		        
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            二维码名片
+		                    <p class="mui-pull-right">></p>   
+		                </div>
+		            </a>
+		        </li> 
+		        
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            分享赤兔名片
+		                    <p class="mui-pull-right">></p>  
+		                </div>
+		            </a>
+		        </li> 
+		</ul> 
+		
+		<!--我的活动信息-->
+		<ul class="mui-table-view mine" style="margin-top: 14px;">
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            我的动态
+		                    <p class="mui-pull-right">></p>   
+		                </div>
+		            </a>
+		        </li> 
+		        
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            我的收藏
+		                    <p class="mui-pull-right">></p>   
+		                </div>
+		            </a>
+		        </li> 
+		        
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            我的活动
+		                    <p class="mui-pull-right">></p>  
+		                </div>
+		            </a>
+		        </li> 
+		        
+		    <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                            谁看过我
+		                    <p class="mui-pull-right">></p>  
+		                </div>
+		            </a>
+		        </li> 
+		</ul> 
+		<ul class="mui-table-view mine" style="margin-top: 14px;">
+		    	<li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="" alt="推广图">
+		                <div class="mui-media-body">
+		                                                           设置
+		                    <p class="mui-pull-right">></p>   
+		                </div>
+		            </a>
+		        </li> 
+		</ul>
+		    
+	    </div>
+		<!--<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			这里放置真实显示的DOM内容
+		</div>
+		</div>-->
+		<nav class="mui-bar mui-bar-tab mui-background-color">
+		    <a class="mui-tab-item main" ng-click="jump('/main')">
+		        <span class="mui-icon iconfont icon-home" style="font-size: 28px;right: 3px;"></span>
+		        <span class="mui-tab-label mui-text-align">赤兔</span>
+		    </a>
+		    <a class="mui-tab-item connection" ng-click="jump('/connection')">
+		        <span class="mui-icon iconfont icon-iconfontlvshiquan"></span>
+		        <span class="mui-tab-label">人脉</span>
+		    </a>
+		    <a class="mui-tab-item message" ng-click="jump('/message')">
+		        <span class="mui-icon iconfont icon-xiaoxi"></span>
+		        <span class="mui-tab-label">消息</span>
+		    </a>
+		    <a class="mui-tab-item discovery" ng-click="jump('/discovery')">
+		        <span class="mui-icon iconfont icon-sousuo"></span>
+		        <span class="mui-tab-label">发现</span>
+		    </a>
+		    <a class="mui-tab-item mine mui-active" ng-click="jump('/mine')">
+		        <span class="mui-icon iconfont icon-yonghu"></span>
+		        <span class="mui-tab-label">我</span>
+		    </a>
+		</nav>
+</div>
+<!--<div ng-include="'tpl/include/personalDetails.html'"></div>-->

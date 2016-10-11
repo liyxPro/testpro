@@ -1,0 +1,61 @@
+<style type="text/css">
+	.mui-popover div.container ul.share{
+		margin:0;
+		padding: 20px 0px;
+		border-radius: 0;
+	}
+	.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+		height: 0;
+	}
+	#sheet1 .main-close{
+		padding: 0;
+	    margin: 0;
+	    border-top: 1px solid #ccc;
+	    border-radius: 0;
+	}
+	.main-close .close b{
+		font-weight: normal;
+	}
+</style>
+<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action ">
+    <!-- 可选择菜单 -->
+    <header class="mui-bar mui-bar-nav" style="border-radius: 0; background: #F2F2F2;">
+        <h1 class="mui-title mui-pull-left" style="color: #000;text-align: left;font-weight: normal;">分享到</h1>
+    </header>
+    <div class="container" style="margin-top: 44px;"> 
+    	<ul class="mui-table-view mui-grid-view mui-grid-12 share" >
+    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+    	    <a href="#">
+    	        <span class="mui-icon mui-icon-home"></span>
+    	        <div class="mui-media-body">微信</div>
+    	    </a>
+    	</li>
+    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+    	    <a href="#">
+    	        <span class="mui-icon mui-icon-email"></span>
+    	        <div class="mui-media-body">QQ</div>
+    	    </a>
+    	</li>
+    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+    	    <a href="#">
+    	        <span class="mui-icon mui-icon-chatbubble"></span>
+    	        <div class="mui-media-body">朋友圈</div>
+    	    </a>
+    	</li>
+    	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+    	    <a href="#">
+    	        <span class="mui-icon mui-icon-location"></span>
+    	        <div class="mui-media-body">我的状态</div>
+    	    </a>
+    	</li>
+    	    </ul>
+    	
+    </div>
+    <!-- 取消菜单 -->
+    <ul class="mui-table-view main-close">
+      <li class="mui-table-view-cell">
+        <!--<a href="#/start"><b>取消</b></a>-->
+        <a class="close" ng-click="mainWindow('sheet1')"><b>取消</b></a>
+      </li>
+    </ul>
+</div>

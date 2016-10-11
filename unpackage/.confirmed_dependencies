@@ -1,0 +1,26 @@
+{
+	"tab-message.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.css",
+			"fonts/iconfont.woff",
+			"tab-main.html"
+		],
+		"refer": [
+			"tab-message.html",
+			"tab-main.html"
+		]
+	},
+	"tab-main.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	}
+}

@@ -1,0 +1,49 @@
+ <style type="text/css">
+ 	.kuang{
+ 	    border: 1px solid #DDDDDD;
+    	height: 33px;
+    	width: 250px;
+    	position: absolute;
+    	top: 6px;
+    	left: 56px;
+    }
+    .mui-bar input.searchkua{
+    	color: #000;
+    	text-align: left;
+    	font-weight: normal;
+    	border:none;
+    	width: 252px;
+    	height: 30px;
+    	margin-top: 3px;
+    	margin-left: 36px;
+    	z-index: 10;
+    	padding-top: 11px;
+    	padding-left:5px;
+    	background: #fff;
+    }
+    header div.kuang span.mui-icon-closeempty{
+    	position: absolute;
+    	right: -16px;
+    	top: -12px;
+    	font-size: 38px;
+    	color: #ddd;
+    }
+ </style>
+ <div id="sheet3" class="mui-popover mui-popover-bottom mui-popover-action" style="top:0;background-color: #F2F2F2;">
+		<header class="mui-bar mui-bar-nav" style="background-color: #fff;border-radius: 0;">
+		    <a ng-click="mainWindow('sheet3')" class="mui-icon mui-icon-left-nav mui-pull-left" style="color: #000;"></a>
+		    <input id="search" class="searchkua mui-title mui-pull-left" placeholder="请输入搜索内容...">
+		    <div class="kuang">
+		    	<span class="mui-icon mui-icon-closeempty" id="clear"></span>
+		    </div>
+		    
+		    <span class="mui-pull-right" style="height: 34px;border-radius:3px;background-color: #37BE9D;width: 15%;line-height: 34px;text-align: center;color: #fff;margin-top: 5px;">搜索</span>
+		</header>
+</div>
+<script>
+	$("#clear").on("click",
+		function(){
+			$("#search").val("");
+		}
+	)
+</script>

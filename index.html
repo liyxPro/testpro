@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <style type="text/css">
+    *{
+    	font-family: "微软雅黑";
+    }
+    body{
+    	background-color: #F2F2F2;
+    }
+    #margin {
+		margin-right: 5em;
+	}
+ 	.icon-style {
+		color:#fff;
+		font-weight: bold;
+	}
+	.mui-background-color{
+		background-color: #F9F9F9;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	/*body {overflow-y: hidden !important;}*/
+	/*没有用*/
+	.mui-tab-label{
+		/*color:#000000;*/
+		font-size:10px;
+	}
+	.mui-text-align{
+		margin-bottom: 3px;
+	}
+	.mui-wrap-img{
+		width:32%;
+		margin-right: 1.5%;
+	}
+	.mui-head-image{
+		width:50px;
+		height:50px;
+		border: 1px solid;
+		border-radius: 50%;
+		margin-right:10px;
+	}
+	.mui-table-view .mui-inner-wrap:last-child{
+		padding-bottom: 9px;
+		border-bottom: 1px solid #eee;
+	}
+	.newsIcon span{
+		width: 32%;
+    	text-align: center;
+    	margin-top: 12px;
+    	color: #97A1AA;
+    	font-size: 20px
+	}
+	.industry{
+		margin-left: 10px;
+	    margin-top: 2px;
+	    font-size: 12px;
+	    vertical-align: top;
+	}
+	.work-position{
+	    margin-top: 2px;
+	    font-size: 12px;
+	    vertical-align: top;
+	}
+	p.content{
+		margin-top:14px;
+		margin-bottom: 10px;
+		color:#000000;
+		white-space:normal;
+	}
+	/*.icon-dianzan:before{
+		color: red;
+	}*/
+	.show-title{
+		border:1px solid #36c09e;
+		color:#36c09e;
+		border-radius: 4px;
+    	padding: 0px 4px;
+    	float: right;
+	}
+	.icon-jiahao{
+		font-weight: normal;
+		font-size: 20px;
+	}
+	.mui-content{
+		margin-bottom: 100px;
+	}
+	span.show-title:active {
+    background: #eee;
+    }
+    </style>
+</head>
+<body ng-controller="parentCtrl">
+	<div ng-view="">
+		
+	</div>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/angular-touch.js"></script>
+	<script src="js/chitu.js" ></script>
+	<script src="js/mui.min.js"></script>
+	<!--<script>
+		window.onload=function(){
+			window.addEventListener('popstate', function(event) {
+  				var href=window.location.href.split("/");
+				console.log(href[href.length-1]);
+				var hrefs=href[href.length-1];
+				var nodes=$("."+hrefs);
+				setTimeout(function(){
+					nodes.addClass("mui-active");
+				},5000)
+				
+			});
+}
+	</script>-->
+    <script type="text/javascript" charset="utf-8">
+    	mui.init();
+    </script>
+    
+    
+    <script type="text/javascript">
+	
+	
+//	$("#webView")
+
+/** Event handler for mouse wheel event.
+         *鼠标滚动事件
+         */
+        var wheel = function(event) {
+            var delta = 0;
+            if (!event) /* For IE. */
+                event = window.event;
+            if (event.wheelDelta) { /* IE/Opera. */
+                delta = event.wheelDelta / 120;
+            } else if (event.detail) {
+                /** Mozilla case. */
+                /** In Mozilla, sign of delta is different than in IE.
+                 * Also, delta is multiple of 3.
+                 */
+                delta = -event.detail / 3;
+            }
+            /** If delta is nonzero, handle it.
+             * Basically, delta is now positive if wheel was scrolled up,
+             * and negative, if wheel was scrolled down.
+             */
+            if (delta)
+                handle(delta);
+            /** Prevent default actions caused by mouse wheel.
+             * That might be ugly, but we handle scrolls somehow
+             * anyway, so don't bother here..
+             */
+            if (event.preventDefault)
+                event.preventDefault();
+            event.returnValue = false;
+        }
+
+        /** Initialization code. 
+         * If you use your own event management code, change it as required.
+         */
+        if (window.addEventListener) {
+            /** DOMMouseScroll is for mozilla. */
+            window.addEventListener('DOMMouseScroll', wheel, false);
+        }
+        /** IE/Opera. */
+        window.onmousewheel = document.onmousewheel = wheel;
+
+        /** This is high-level function.
+         * It must react to delta being more/less than zero.
+         */
+        var tops=0;
+        var handle = function(delta) {
+            var random_num = Math.floor((Math.random() * 100) + 50);
+            var webViewtop=parseInt($("#webView").offset().top);
+            var height=parseInt($("#webView").css("height"));
+            if (delta < 0) {
+                 //alert("鼠标滑轮向下滚动：" + delta + "次！"); // 1
+                if(delta>=-1){
+                tops+=delta*100; 
+                console.log(-webViewtop);
+                 if(webViewtop<=0&&(-webViewtop)<height){
+                $("#webView").css("top",tops+"px");
+                //$("btn_next_pic").onclick(random_num);
+                }
+                }
+                return;
+            } else {
+                 //alert("鼠标滑轮向上滚动：" + delta + "次！"); // -1
+                 if(delta<=1){ 
+//               =webViewtop+delta*100;
+				if(webViewtop<0){
+                 tops=webViewtop+delta*100;
+                 $("#webView").css("top",tops+"px");
+                 }
+				}
+                //$("btn_last_pic").onclick(random_num);
+                return;
+            }
+        }
+</script>
+    
+</body>
+</html>
